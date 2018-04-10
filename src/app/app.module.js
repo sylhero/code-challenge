@@ -1,5 +1,11 @@
 (function(angular) {
     'use strict';
 
-    angular.module('app', ['app.common']);
+    angular.module('app', [
+        'app.common',
+        'app.login',
+        'app.account',
+        'app.registration',
+        'app.error401',
+        'app.error404']);
 })(angular);

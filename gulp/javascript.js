@@ -55,6 +55,7 @@ module.exports = (function() {
     function buildLibraries() {
         common.gulpInfo('compiling vendor javascript libraries');
         return gulp.src(config.javascript.venderSource)
+            .pipe($.if(config.environment !== 'prod', $.print()))
             .pipe($.newer(config.temp + config.javascript.vendorDest))
             .pipe($.if(config.environment !== 'prod', $.sourcemaps.init({
                 loadMaps: true

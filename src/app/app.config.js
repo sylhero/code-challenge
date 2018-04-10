@@ -20,7 +20,7 @@
                 url: '/login',
                 views: {
                     'main@': {
-                        component: 'loginComponent'
+                        component: 'login'
                     }
                 }
             });
@@ -29,7 +29,7 @@
                 url: '/registration',
                 views: {
                     'main@': {
-                        component: 'registrationComponent'
+                        component: 'registration'
                     }
                 }
             });
@@ -38,7 +38,7 @@
                 url: '/account',
                 views: {
                     'main@': {
-                        component: 'accountComponent'
+                        component: 'account'
                     }
                 }
             });
@@ -47,7 +47,7 @@
                 url: '/401',
                 views: {
                     'main@': {
-                        component: 'error401Component'
+                        component: 'error401'
                     }
                 }
             });
@@ -56,7 +56,7 @@
                 url: '/404',
                 views: {
                     'main@': {
-                        component: 'error404Component'
+                        component: 'error404'
                     }
                 }
             });

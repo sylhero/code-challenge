@@ -17,6 +17,7 @@ module.exports = function(config) {
             //'src/tests/custom-matchers.js',
             '.tmp/js/libraries*.js',
             'node_modules/angular-mocks/angular-mocks.js',
+            'node_modules/angular-material/angular-material-mocks.js',
             'src/app/**/*.module.js',
             'src/app/**/*.js',
             'src/tests/unit/**/*.spec.js'
