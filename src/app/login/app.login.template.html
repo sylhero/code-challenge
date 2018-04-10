@@ -1,3 +1,24 @@
-<div>
-    <h1>{{vm.test}}</h1>
+<md-content  class="md-padding" layout-xs="column" layout="column">
+    <div class="login">
+    <h1>Welcome</h1>
+    <md-card>
+        <md-card-content>
+            <form name="loginForm" data-ng-submit="vm.submit()" novalidate>
+                <md-input-container class="md-block">
+                <label>Username</label>
+                <md-icon md-font-icon="material-icons">account_circle</md-icon>
+                <input data-ng-model="vm.user.username" placeholder="Enter your Username" data-ng-required="true" />
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                <label>Password</label>
+                <md-icon md-font-icon="material-icons">lock</md-icon>
+                <input data-ng-model="vm.user.password" placeholder="Enter your password" ng-required="true" />
+                </md-input-container>
+                <md-button class="md-raised md-primary" type="submit">Submit</md-button>
+            </form>
+        </md-card-content>
+    </md-card>
 </div>
+</md-content>
+

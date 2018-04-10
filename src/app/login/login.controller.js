@@ -9,7 +9,10 @@
         vm.$onInit = init;
 
         function init() {
-            vm.test = 'this is login';
+            vm.user = {
+                username: '',
+                password: ''
+            };
         }
     }
 })(angular);
