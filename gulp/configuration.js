@@ -30,21 +30,18 @@ module.exports = (function() {
         css: {
             vendorSource: [
                 'node_modules/bootstrap/dist/css/bootstrap.min.css',
-                'node_modules/font-awesome/css/font-awesome.css',
                 'node_modules/angular-loading-bar/build/loading-bar.min.css',
                 'node_modules/angular-toastr/dist/angular-toastr.css'
             ],
             vendorDest: '/styles/libraries_app.css',
             appSource: source + '/**/*.scss',
-            appDest: '/styles/application_app.css',
-            mergeDest: '/styles/app.css'
+            appDest: '/styles/application_app.css'
         },
         //javascript config
         javascript: {
             appSource: [source + '/**/*.js', temp + '/templates.js'],
             appDest: '/js/application_app.js',
             vendorDest: '/js/libraries_app.js',
-            mergeDest: '/js/app.js',
             venderSource: [
                 'node_modules/jquery/dist/jquery.min.js',
                 'node_modules/angular/angular.min.js',
