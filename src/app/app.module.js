@@ -4,6 +4,8 @@
     angular.module('app', [
         'app.common',
         'app.login',
+        'app.leads',
+        'app.sidebar',
         'app.account',
         'app.registration',
         'app.error401',

@@ -43,6 +43,15 @@
                 }
             });
 
+            $stateProvider.state(StateConstant.APP_LEADS, {
+                url: '/leads',
+                views: {
+                    'main@': {
+                        component: 'leads'
+                    }
+                }
+            });
+
             $stateProvider.state(StateConstant.APP_401, {
                 url: '/401',
                 views: {
