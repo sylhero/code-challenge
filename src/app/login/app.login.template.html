@@ -1,24 +1,28 @@
-<md-content  class="md-padding" layout-xs="column" layout="column">
-    <div class="login">
-    <h1>Welcome</h1>
+<div layout="column" layout-align="center center" class="login transition-animation">
+    <div>
+        <h1>Welcome</h1>
+    </div>
     <md-card>
-        <md-card-content>
-            <form name="loginForm" data-ng-submit="vm.submit()" novalidate>
+        <md-card-content class="form-content">
+            <form name="loginForm" data-ng-submit="loginForm.$valid && vm.submit()" novalidate>
                 <md-input-container class="md-block">
-                <label>Username</label>
-                <md-icon md-font-icon="material-icons">account_circle</md-icon>
-                <input data-ng-model="vm.user.username" placeholder="Enter your Username" data-ng-required="true" />
+                    <label>Email</label>
+                    <md-icon md-font-icon="material-icons">email</md-icon>
+                    <input data-ng-model="vm.user.email" placeholder="Enter your Email" type="email" data-ng-required="true" />
                 </md-input-container>
 
                 <md-input-container class="md-block">
-                <label>Password</label>
-                <md-icon md-font-icon="material-icons">lock</md-icon>
-                <input data-ng-model="vm.user.password" placeholder="Enter your password" ng-required="true" />
+                    <label>Password</label>
+                    <md-icon md-font-icon="material-icons">lock</md-icon>
+                    <input data-ng-model="vm.user.password" placeholder="Enter your password" type="password" ng-required="true" />
                 </md-input-container>
-                <md-button class="md-raised md-primary" type="submit">Submit</md-button>
+                <md-progress-circular class="md-hue-2" md-diameter="50px" data-ng-if="vm.isLoading"></md-progress-circular>
+                <md-button data-ng-if="!vm.isLoading" class="md-raised md-primary submit-button" type="submit">Submit</md-button>
             </form>
+            <div class="sign-up">Don't have an account?
+                <a href="/registration">Sign up</a>
+            </div>
         </md-card-content>
     </md-card>
 </div>
-</md-content>
 

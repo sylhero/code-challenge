@@ -8,11 +8,16 @@
         'app.StateConstant',
         '$locationProvider',
         '$urlMatcherFactoryProvider',
+        '$mdThemingProvider',
         function($stateProvider, $urlRouterProvider, cfpLoadingBarProvider,
-            StateConstant, $locationProvider, $urlMatcherFactoryProvider) {
+            StateConstant, $locationProvider, $urlMatcherFactoryProvider,
+            $mdThemingProvider) {
             cfpLoadingBarProvider.includeSpinner = false;
             $urlMatcherFactoryProvider.strictMode(false);
-
+            $mdThemingProvider.theme('pink')
+            .primaryPalette('pink');
+            $mdThemingProvider.theme('blue')
+            .primaryPalette('blue');
             $stateProvider.state(StateConstant.APP, {
                 abstract: true
             });
@@ -69,7 +74,7 @@
                     }
                 }
             });
-
+            $urlRouterProvider.when('/', '/login');
             $urlRouterProvider.otherwise('/404');
             $locationProvider.html5Mode(true);
             $locationProvider.hashPrefix('!');
