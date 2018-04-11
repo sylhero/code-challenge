@@ -10,6 +10,7 @@
 
         function init() {
             vm.test = 'this is error404';
+            vm.background = '../assets/img/404.jpg';
         }
     }
 })(angular);

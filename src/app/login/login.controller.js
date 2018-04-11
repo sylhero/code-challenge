@@ -18,15 +18,15 @@
                 password: ''
             };
             vm.isLoading = false;
+            CommonService.setPageTitle('Login');
         }
         function submit() {
             vm.isLoading = true;
             LoginService.login(vm.user.email, vm.user.password).then(function() {
-                $state.go(StateConstant.APP_LEADS);
+                $state.go(StateConstant.LEADS);
             }, function(error) {
                 vm.isLoading = false;
                 CommonService.showToast('Opps! Please try again later');
-                console.log(error);
             });
         }
 

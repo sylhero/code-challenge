@@ -2,11 +2,12 @@
     'use strict';
     angular.module('app.common')
         .service('app.common.CommonService', CommonService);
-    CommonService.$inject = ['$mdToast'];
+    CommonService.$inject = ['$mdToast', '$window'];
 
-    function CommonService($mdToast) {
+    function CommonService($mdToast, $window) {
         var svc = this;
         svc.showToast = showToast;
+        svc.setPageTitle = setPageTitle;
 
         function showToast(content) {
             $mdToast.show(
@@ -15,6 +16,10 @@
                 .position('top right')
                 .hideDelay(3000)
             );
+        }
+
+        function setPageTitle(title) {
+            $window.document.title = title;
         }
     }
 })(angular);

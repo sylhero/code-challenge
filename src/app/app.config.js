@@ -21,7 +21,7 @@
             $stateProvider.state(StateConstant.APP, {
                 abstract: true
             });
-            $stateProvider.state(StateConstant.APP_LOGIN, {
+            $stateProvider.state(StateConstant.LOGIN, {
                 url: '/login',
                 views: {
                     'main@': {
@@ -30,7 +30,7 @@
                 }
             });
 
-            $stateProvider.state(StateConstant.APP_REGISTRATION, {
+            $stateProvider.state(StateConstant.REGISTRATION, {
                 url: '/registration',
                 views: {
                     'main@': {
@@ -39,7 +39,7 @@
                 }
             });
 
-            $stateProvider.state(StateConstant.APP_ACCOUNT, {
+            $stateProvider.state(StateConstant.ACCOUNT, {
                 url: '/account',
                 views: {
                     'main@': {
@@ -48,7 +48,7 @@
                 }
             });
 
-            $stateProvider.state(StateConstant.APP_LEADS, {
+            $stateProvider.state(StateConstant.LEADS, {
                 url: '/leads',
                 views: {
                     'main@': {
@@ -57,7 +57,7 @@
                 }
             });
 
-            $stateProvider.state(StateConstant.APP_401, {
+            $stateProvider.state(StateConstant.ERROR_401, {
                 url: '/401',
                 views: {
                     'main@': {
@@ -66,7 +66,7 @@
                 }
             });
 
-            $stateProvider.state(StateConstant.APP_404, {
+            $stateProvider.state(StateConstant.ERROR_404, {
                 url: '/404',
                 views: {
                     'main@': {
