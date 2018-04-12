@@ -42,8 +42,17 @@
             $stateProvider.state(StateConstant.ACCOUNT, {
                 url: '/account',
                 views: {
+                    'header@': {
+                        component: 'header'
+                    },
                     'main@': {
                         component: 'account'
+                    },
+                    'sidebar@': {
+                        component: 'sidebar'
+                    },
+                    'footer@': {
+                        component: 'footer'
                     }
                 }
             });
@@ -51,8 +60,17 @@
             $stateProvider.state(StateConstant.LEADS, {
                 url: '/leads',
                 views: {
+                    'header@': {
+                        component: 'header'
+                    },
                     'main@': {
                         component: 'leads'
+                    },
+                    'sidebar@': {
+                        component: 'sidebar'
+                    },
+                    'footer@': {
+                        component: 'footer'
                     }
                 }
             });

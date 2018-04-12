@@ -1,7 +1,14 @@
 /* import base */
 @import './partials/base';
+@import './partials/common';
 
 /* import component css */
 @import './login/login';
 @import './registration/registration';
 @import './error404/error404';
+@import './header/header';
+@import './leads/leads';
+@import './sidebar/sidebar';
+@import './account/account';
+@import './footer/footer';
+

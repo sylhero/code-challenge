@@ -10,15 +10,14 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link rel="icon" href="/assets/favicon.png" />
     </head>
-    <header>
-        <div class="header" ui-view="header"></div>
-    </header>
+    <div ui-view="header"></div>
     <body>
-        <div ui-view="main"></div>
+        <main class="main">
+            <div ui-view="sidebar" class="left-screen"></div>
+            <div ui-view="main" class="right-screen"></div>
+        </main>
         <!-- inject:js -->
         <!-- endinject -->
     </body>
-    <footer>
-        <div class="footer" ui-view="footer"></div>
-    </footer>
+    <div ui-view="footer"></div>
 </html>

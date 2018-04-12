@@ -1,3 +1,13 @@
-<div>
-    <h1>{{vm.test}}</h1>
-</div>
+<md-sidenav class="md-sidenav-left sidebar"
+        md-component-id="left"
+        md-whiteframe="4"
+        md-is-locked-open="$mdMedia('gt-sm')">
+    <md-content class="sidebar-content">
+       <div>
+           <md-button md-no-ink class="md-primary" data-ng-click="vm.goToLeads()"><md-icon md-font-icon="material-icons">event_note</md-icon>My Leads</md-button>
+        </div>
+        <div>
+            <md-button md-no-ink class="md-primary" data-ng-click="vm.goToAccount()"><md-icon md-font-icon="material-icons">account_box</md-icon>My Account</md-button>
+        </div>
+      </md-content>
+</md-sidenav>

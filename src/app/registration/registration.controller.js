@@ -21,13 +21,14 @@
                 scheme: ''
             };
             vm.isLoading = false;
+            CommonService.setPageTitle('Login');
         }
         function submit() {
             vm.isLoading = true;
             RegistrationService.registration(vm.user.fullName,
                 vm.user.phone, vm.user.email, vm.user.password, vm.user.theme).then(function() {
                 $state.go(StateConstant.LOGIN);
-            }, function(error) {
+            }, function() {
                 vm.isLoading = false;
                 CommonService.showToast('Opps! Please try again later');
             });

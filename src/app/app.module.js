@@ -3,6 +3,8 @@
 
     angular.module('app', [
         'app.common',
+        'app.header',
+        'app.footer',
         'app.login',
         'app.leads',
         'app.sidebar',

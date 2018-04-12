@@ -24,7 +24,7 @@
             vm.isLoading = true;
             LoginService.login(vm.user.email, vm.user.password).then(function() {
                 $state.go(StateConstant.LEADS);
-            }, function(error) {
+            }, function() {
                 vm.isLoading = false;
                 CommonService.showToast('Opps! Please try again later');
             });

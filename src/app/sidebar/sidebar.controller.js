@@ -2,14 +2,20 @@
     'use strict';
     angular.module('app.sidebar')
         .controller('app.sidebar.SidebarController', SidebarController);
-    SidebarController.$inject = [];
+    SidebarController.$inject = ['$state',
+        'app.StateConstant'];
 
-    function SidebarController() {
+    function SidebarController($state, StateConstant) {
         var vm = this;
-        vm.$onInit = init;
+        vm.goToLeads = goToLeads;
+        vm.goToAccount = goToAccount;
 
-        function init() {
-            vm.test = 'this is sidebar';
+        function goToLeads() {
+            $state.go(StateConstant.LEADS);
+        }
+
+        function goToAccount() {
+            $state.go(StateConstant.ACCOUNT);
         }
     }
 })(angular);
