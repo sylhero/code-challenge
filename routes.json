@@ -1,0 +1,5 @@
+{
+    "/clients/:id/": "/clients?id=:id",
+    "/clients/": "/clients",
+    "/clients/login/": "/login"
+}

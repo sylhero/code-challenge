@@ -1,0 +1,12 @@
+{
+  "clients": [
+    {
+      "email": "test@test.com",
+      "full_name": "Test Test",
+      "phone": "12345678",
+      "template": "pink",
+      "id": 1
+    }
+  ],
+  "login": []
+}
