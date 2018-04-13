@@ -32,7 +32,8 @@ module.exports = (function() {
                 'node_modules/bootstrap/dist/css/bootstrap.min.css',
                 'node_modules/angular-loading-bar/build/loading-bar.min.css',
                 'node_modules/angular-toastr/dist/angular-toastr.css',
-                'node_modules/angular-material/angular-material.min.css'
+                'node_modules/angular-material/angular-material.min.css',
+                'node_modules/angular-material-data-table/dist/md-data-table.min.css'
             ],
             vendorDest: '/styles/libraries_app.css',
             appSource: source + '/**/*.scss',
@@ -54,7 +55,8 @@ module.exports = (function() {
                 'node_modules/angular-sanitize/angular-sanitize.min.js',
                 'node_modules/angular-toastr/dist/angular-toastr.tpls.min.js',
                 'node_modules/angular-aria/angular-aria.min.js',
-                'node_modules/angular-material/angular-material.min.js'
+                'node_modules/angular-material/angular-material.min.js',
+                'node_modules/angular-material-data-table/dist/md-data-table.min.js'
             ]
         },
 

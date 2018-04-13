@@ -1,3 +1,23 @@
- <section class="leads">
-    fsdfdsdfsds
-</section>
+ <div class="leads">
+    <h1>My Leads</h1>
+    <md-table-pagination md-limit="vm.tableConfig.limit" md-limit-options="[5, 10, 15]" md-page="vm.tableConfig.page" md-total="{{vm.total}}"  md-page-select md-on-paginate="vm.next"></md-table-pagination>
+    <md-table-container>
+        <table md-table>
+            <thead md-head>
+                <tr md-row>
+                    <th md-column>Name</th>
+                    <th md-column>Email</th>
+                    <th md-column>Phone</th>
+                </tr>
+            </thead>
+            <tbody md-body>
+              <tr ng-repeat="lead in vm.leads">
+                    <td md-cell>{{lead.full_name}}</td>
+                    <td md-cell>{{lead.email}}</td>
+                    <td md-cell>{{lead.phone}}</td>
+              </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+    <md-table-pagination md-limit="vm.tableConfig.limit" md-limit-options="[5, 10, 15]" md-page="vm.tableConfig.page" md-total="{{vm.total}}"  md-page-select md-on-paginate="vm.next"></md-table-pagination>
+</div>

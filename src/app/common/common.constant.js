@@ -2,6 +2,6 @@
     'use strict';
 
     angular.module('app.common').constant('app.common.CommonConstant', {
-        BASE_URL: 'http://192.34.78.153:5000'
+        BASE_URL: 'http://localhost:5000'
     });
 })(angular);

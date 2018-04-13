@@ -8,6 +8,7 @@
         'ngSanitize',
         'ngAnimate',
         'toastr',
-        'angular-loading-bar'
+        'angular-loading-bar',
+        'md.data.table'
     ]);
 })(angular);
