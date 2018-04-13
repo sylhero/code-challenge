@@ -61,6 +61,6 @@
     // =========================================================================
     // export NODE_ENV=prod
     gulp.task('production', function(callback) {
-        runSequence('html', 'js', 'js', 'style', 'static', 'html', callback);
+        runSequence('js', 'style', 'static', 'html', callback);
     });
 })();

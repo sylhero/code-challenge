@@ -13,6 +13,7 @@ module.exports = (function() {
         temp: temp,
         dest: dest,
         source: source,
+        environment: environment,
         //html config
         html: {
             indexSource: source + '/index.html',
