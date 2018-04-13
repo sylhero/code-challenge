@@ -36,7 +36,6 @@ module.exports = (function() {
     function buildLibraries() {
         common.gulpInfo('Compiling vendor sass ---> CSS');
         return gulp.src(config.css.vendorSource)
-            .pipe($.if(config.environment !== 'prod', $.print()))
             .pipe($.newer(config.temp + config.css.vendorDest))
             .pipe($.if(config.environment !== 'prod', $.sourcemaps.init({
                 loadMaps: true

@@ -2,19 +2,15 @@
     'use strict';
     angular.module('app.header')
         .controller('app.header.HeaderController', HeaderController);
-    HeaderController.$inject = [
-        '$state',
-        'app.StateConstant'];
+    HeaderController.$inject = ['$state', '$stateParams', 'app.StateConstant'];
 
-    function HeaderController($state, StateConstant) {
+    function HeaderController($state, $stateParams, StateConstant) {
         var vm = this;
         vm.$onInit = init;
         vm.logout = logout;
 
         function init() {
-            vm.user = {
-                theme: 'pink'
-            };
+            vm.theme = $stateParams.theme;
         }
         function logout() {
             //TODO delete user token in the localstorage

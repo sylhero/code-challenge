@@ -1,7 +1,9 @@
+
 <md-sidenav class="md-sidenav-left sidebar"
         md-component-id="left"
         md-whiteframe="4"
-        md-is-locked-open="$mdMedia('gt-xs')">
+        md-theme="vm.theme"
+        md-is-locked-open="$mdMedia('gt-xs')" fullscreen>
     <md-content class="sidebar-content">
        <div>
            <md-button md-no-ink class="md-primary" data-ng-click="vm.goToLeads()"><md-icon md-font-icon="material-icons">event_note</md-icon>My Leads</md-button>
@@ -11,3 +13,5 @@
         </div>
       </md-content>
 </md-sidenav>
+
+

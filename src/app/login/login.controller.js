@@ -22,8 +22,16 @@
         }
         function submit() {
             vm.isLoading = true;
-            LoginService.login(vm.user.email, vm.user.password).then(function() {
-                $state.go(StateConstant.LEADS);
+            LoginService.login(vm.user.email, vm.user.password).then(function(data) {
+                data.theme = 'pink';
+                data.token = 'b89720c634d64763b434f8efc3dbe4f2';
+                data.id = 0;
+                //TODO pass the actual response to leads state
+                $state.go(StateConstant.LEADS, {
+                    theme: data.theme,
+                    token: data.token,
+                    id: data.id
+                });
             }, function() {
                 vm.isLoading = false;
                 CommonService.showToast('Opps! Please try again later');

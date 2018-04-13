@@ -2,13 +2,15 @@
     'use strict';
     angular.module('app.leads')
         .controller('app.leads.LeadsController', LeadsController);
-    LeadsController.$inject = ['app.leads.LeadsService', 'app.common.CommonService'];
+    LeadsController.$inject = ['$stateParams', 'app.leads.LeadsService', 'app.common.CommonService'];
 
-    function LeadsController(LeadsService, CommonService) {
+    function LeadsController($stateParams, LeadsService, CommonService) {
         var vm = this;
         vm.$onInit = init;
         vm.next = next;
         function init() {
+            console.log($stateParams.theme);
+            vm.theme = $stateParams.theme;
             vm.data = [];
             vm.tableConfig = {
                 order: 'Name',
@@ -23,8 +25,8 @@
                     vm.tableConfig.limit <= data.length ? vm.tableConfig.limit : data.length);
             }, function() {
                 CommonService.showToast('Opps! Please try again later');
-            })
-        };
+            });
+        }
 
         function next(page, limit) {
             var start = page * limit - limit;

@@ -10,6 +10,6 @@
         'app.sidebar',
         'app.account',
         'app.registration',
-        'app.error401',
+        'app.smart-form',
         'app.error404']);
 })(angular);

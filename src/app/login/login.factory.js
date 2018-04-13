@@ -12,10 +12,7 @@
 
         function login() {
             var url = '/clients/login/';
-            return $resource(baseUrl + url, {
-                email: '@email',
-                password: '@password'
-            }, {
+            return $resource(baseUrl + url, {}, {
                 auth: {
                     method: 'POST',
                     headers: {

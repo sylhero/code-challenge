@@ -18,6 +18,20 @@
             .primaryPalette('pink');
             $mdThemingProvider.theme('blue')
             .primaryPalette('blue');
+            var params = {
+                theme: {
+                    squash: true,
+                    value: null
+                },
+                id: {
+                    squash: true,
+                    value: null
+                },
+                token: {
+                    squash: true,
+                    value: null
+                }
+            };
             $stateProvider.state(StateConstant.APP, {
                 abstract: true
             });
@@ -40,7 +54,8 @@
             });
 
             $stateProvider.state(StateConstant.ACCOUNT, {
-                url: '/account',
+                url: '/account?theme&id&token',
+                params: params,
                 views: {
                     'header@': {
                         component: 'header'
@@ -58,7 +73,8 @@
             });
 
             $stateProvider.state(StateConstant.LEADS, {
-                url: '/leads',
+                url: '/leads?theme&id&token',
+                params: params,
                 views: {
                     'header@': {
                         component: 'header'

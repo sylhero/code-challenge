@@ -1,7 +1,10 @@
  <div class="leads">
     <h1>My Leads</h1>
-    <label>Search: <input data-ng-model="searchText" /></label>
-    <md-table-pagination md-limit="vm.tableConfig.limit" md-limit-options="[5, 10, 15]" md-page="vm.tableConfig.page" md-total="{{vm.total}}"  md-page-select md-on-paginate="vm.next"></md-table-pagination>
+    <md-input-container class="md-block" md-theme="vm.theme">
+      <label>Search</label>
+      <md-icon md-font-icon="material-icons">search</md-icon><input ng-model="searchText" type="text" />
+    </md-input-container>
+    <md-table-pagination md-limit="vm.tableConfig.limit" md-limit-options="[5, 10, 15]" md-page="vm.tableConfig.page" md-total="{{vm.total}}"  md-page-select md-on-paginate="vm.next" class="paging-top"></md-table-pagination>
     <md-table-container>
         <table md-table>
             <thead md-head>
