@@ -41,8 +41,8 @@ Tested on Mac with **node v9.8.0 and npm  v5.6.0** and also tested on ubuntu 16.
 You can see the demo on both your local and AWS. The code is deployed in AWS S3 bucket with a mock server running on AWS EC2 instance. Please login to see all features. For login you can use any `email` and `password` since it's just mock after login you should have the url like this http://domain.com/leads?theme=pink&id=0&token=b89720c634d64763b434f8efc3dbe4f2
 you can manually change the `theme` for exmaple: `theme=blue` with make the page render with blue theme
 
-### 100% Unit test coverage
-The code is covered by 100% unit tests. You can view the coverage report at http://demo-code-bucket-1.s3-website-us-east-1.amazonaws.com/coverage/index.html
+### 100% unit test coverage
+Features are covered 100% by unit tests. You can view the coverage report at http://demo-code-bucket-1.s3-website-us-east-1.amazonaws.com/coverage/index.html
 or on your local at `[PROJECT_ROOT]/reports/coverage/lcov-report/index.html`
 
 ### AWS
