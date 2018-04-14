@@ -51,7 +51,7 @@
 
     /** build tasks*/
     gulp.task('build', function(callback) {
-        runSequence('js', 'style', 'static', 'html', 'server', callback);
+        runSequence('js', 'style', 'static', 'html', 'test:unit', 'server', callback);
     });
 
 
@@ -61,6 +61,6 @@
     // =========================================================================
     // export NODE_ENV=prod
     gulp.task('production', function(callback) {
-        runSequence('js', 'style', 'static', 'html', callback);
+        runSequence('js', 'style', 'static', 'html', 'test:unit', callback);
     });
 })();
