@@ -13,7 +13,6 @@
             vm.theme = $stateParams.theme;
         }
         function logout() {
-            //TODO delete user token in the localstorage
             $state.go(StateConstant.LOGIN);
 
         }

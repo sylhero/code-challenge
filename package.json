@@ -8,7 +8,7 @@
     "clean": "gulp clean",
     "test": "gulp test:unit",
     "production": "gulp production",
-    "server": "json-server --watch db.json --port 5000 --routes routes.json"
+    "server": "json-server --watch db.json --port 5000 --routes routes.json --id client_id"
   },
   "author": "Yulong Song <felixsong88@gmail.com>",
   "devDependencies": {

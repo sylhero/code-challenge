@@ -8,7 +8,8 @@
         var baseUrl = CommonConstant.BASE_URL;
         return {
             registration: registration,
-            updateInfo: updateInfo
+            updateInfo: updateInfo,
+            getUser: getUser
         };
 
         function registration() {
@@ -23,11 +24,26 @@
                 }
             });
         }
-
-        function updateInfo(token) {
+        function getUser(token) {
             var url = '/clients/:id/';
             return $resource(baseUrl + url, {
                 id: '@id'
+            }, {
+                get: {
+                    method: 'GET',
+                    headers: {
+                        'X-Api-Token': 'yulong-song',
+                        'Content-Type': 'application/json',
+                        'X-Login-Token': token
+                    }
+                }
+            });
+        }
+        function updateInfo(token) {
+            var url = '/clients/:client_id/';
+            return $resource(baseUrl + url, {
+                /*jshint camelcase: false */
+                client_id: '@client_id'
             }, {
                 update: {
                     method: 'PUT',

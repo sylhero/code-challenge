@@ -7,7 +7,6 @@
         REGISTRATION: 'APP.REGISTRATION',
         ACCOUNT: 'APP.ACCOUNT',
         LEADS: 'APP.LEADS',
-        ERROR_404: 'APP.ERROR_404',
-        ERROR_401: 'APP.ERROR_401'
+        ERROR_404: 'APP.ERROR_404'
     });
 })(angular);

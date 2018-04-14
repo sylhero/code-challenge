@@ -2,9 +2,9 @@
     'use strict';
     angular.module('app.footer')
         .controller('app.footer.FooterController', FooterController);
-    FooterController.$inject = ['$state', '$stateParams'];
+    FooterController.$inject = ['$stateParams'];
 
-    function FooterController($state, $stateParams) {
+    function FooterController($stateParams) {
         var vm = this;
         vm.$onInit = init;
 

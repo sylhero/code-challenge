@@ -25,6 +25,15 @@
                 vm.submitLabel = 'Create Account';
             }else {
                 vm.submitLabel = 'Update Info';
+                SmartFormService.getUser($stateParams.id, $stateParams.token).then(function(data) {
+                    vm.user.email = data.email;
+                    /*jshint camelcase: false */
+                    vm.user.fullName = data.full_name;
+                    vm.user.phone = data.phone;
+                    vm.user.theme = data.template;
+                }, function() {
+                    CommonService.showToast('Opps! Please try again later');
+                });
             }
             vm.isLoading = false;
         }
@@ -32,7 +41,7 @@
             vm.isLoading = true;
             if (vm.formType === 'registration') {
                 SmartFormService.registration(vm.user.fullName,
-                    vm.user.phone, vm.user.email, vm.user.password, vm.user.theme).then(function() {
+                    vm.user.email, vm.user.phone, vm.user.theme).then(function() {
                     $state.go(StateConstant.LOGIN);
                 }, function() {
                     vm.isLoading = false;
@@ -40,8 +49,7 @@
                 });
             } else {
                 SmartFormService.updateInfo($stateParams.id, vm.user.fullName,
-                    vm.user.phone, vm.user.email, vm.user.password,
-                    vm.user.theme, $stateParams.token).then(function() {
+                    vm.user.phone, vm.user.email, vm.user.theme, $stateParams.token).then(function() {
                         vm.isLoading = false;
                         CommonService.showToast('Success! Your personal info has been updated!');
                     }, function() {

@@ -8,26 +8,36 @@
         var svc = this;
         svc.registration = registration;
         svc.updateInfo = updateInfo;
+        svc.getUser = getUser;
 
-        function registration(fullName, phone, email, password, theme) {
+        function registration(fullName, email, phone, theme) {
             return SmartFormFactory.registration()
                 .register({
-                    fullName: fullName,
-                    phone: phone,
+                    /*jshint camelcase: false */
+                    full_name: fullName,
                     email: email,
-                    password: password,
-                    theme: theme
+                    phone: phone,
+                    template: theme
+                }).$promise;
+        }
+
+        function getUser(id, token) {
+            return SmartFormFactory.getUser(token)
+                .get({
+                    id: id
                 }).$promise;
         }
 
         function updateInfo(id, fullName, phone, email, theme, token) {
             return SmartFormFactory.updateInfo(token)
                 .update({
-                    id: id,
-                    fullName: fullName,
+                    /*jshint camelcase: false */
+                    client_id: parseInt(id),
+                    /*jshint camelcase: false */
+                    full_name: fullName,
                     phone: phone,
                     email: email,
-                    theme: theme
+                    template: theme
                 }).$promise;
         }
     }

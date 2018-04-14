@@ -1,17 +1,23 @@
 {
   "clients": [
     {
-      "id": 0,
-      "fullName": "ddddd",
-      "phone": "",
-      "email": "fdsfs@dsfsj.com",
-      "theme": ""
+      "client_id": 0,
+      "full_name": "test test",
+      "phone": "11111111",
+      "email": "test@test.com",
+      "template": "pink"
+    },
+    {
+      "full_name": "test",
+      "email": "fsdfs@fsjf.com",
+      "phone": "123456666",
+      "template": "blue",
+      "client_id": 1
     }
   ],
   "login": [
     {
-      "id": 0,
-      "client_id": "0",
+      "client_id": 0,
       "email": "test@test.com",
       "full_name": "asdf",
       "phone": "5144444444",
@@ -19,15 +25,15 @@
       "token": "b89720c634d64763b434f8efc3dbe4f2"
     },
     {
-      "email": "test@test.co",
-      "password": "mlskjfklsjf",
-      "id": 1
+      "email": "test@test.com",
+      "password": "sjfklsdjklsd",
+      "client_id": 1
     }
   ],
   "password": [
     {
-      "id": 0,
-      "password": "33333333"
+      "client_id": 0,
+      "password": "22222222222"
     }
   ],
   "leads": [

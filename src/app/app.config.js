@@ -32,6 +32,7 @@
                     value: null
                 }
             };
+            //TODO imlement routing guard by resolving token authentication here
             $stateProvider.state(StateConstant.APP, {
                 abstract: true
             });
@@ -87,15 +88,6 @@
                     },
                     'footer@': {
                         component: 'footer'
-                    }
-                }
-            });
-
-            $stateProvider.state(StateConstant.ERROR_401, {
-                url: '/401',
-                views: {
-                    'main@': {
-                        component: 'error401'
                     }
                 }
             });

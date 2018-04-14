@@ -23,9 +23,6 @@ module.exports = function(config) {
             'src/tests/unit/**/*.spec.js'
         ],
 
-        // list of files to exclude
-        exclude: ['src/app/widgets/webchat/webchat.controller.js'],
-
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {

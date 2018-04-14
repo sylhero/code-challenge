@@ -22,16 +22,14 @@
         }
         function submit() {
             vm.isLoading = true;
-            LoginService.login(vm.user.email, vm.user.password).then(function(data) {
-                data.theme = 'pink';
-                data.token = 'b89720c634d64763b434f8efc3dbe4f2';
-                data.id = 0;
-                //TODO pass the actual response to leads state
+            LoginService.login(vm.user.email, vm.user.password).then(function() {
+                //TODO use the actual data when integrate with the backend
                 $state.go(StateConstant.LEADS, {
-                    theme: data.theme,
-                    token: data.token,
-                    id: data.id
+                    theme: 'pink',
+                    token: 'b89720c634d64763b434f8efc3dbe4f2',
+                    id: 0
                 });
+
             }, function() {
                 vm.isLoading = false;
                 CommonService.showToast('Opps! Please try again later');

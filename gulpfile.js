@@ -47,7 +47,7 @@
     gulp.task('server', server.buildServer);
 
     /** test tasks */
-    gulp.task('test', test.unit);
+    gulp.task('test:unit', test.unit);
 
     /** build tasks*/
     gulp.task('build', function(callback) {

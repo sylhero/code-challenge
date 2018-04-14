@@ -1,6 +1,7 @@
 {
     "/clients/login/": "/login",
-    "/clients/:id/password/": "/password/:id",
+    "/clients/:client_id/password/": "/password/:client_id",
+    "/clients/:client_id/": "/clients/:client_id",
     "/clients/": "/clients",
     "/leads/": "/leads"
 }

@@ -9,9 +9,9 @@
         vm.$onInit = init;
         vm.next = next;
         function init() {
-            console.log($stateParams.theme);
             vm.theme = $stateParams.theme;
             vm.data = [];
+            vm.leads = [];
             vm.tableConfig = {
                 order: 'Name',
                 limit: 5,
