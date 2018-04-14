@@ -3,6 +3,8 @@
 ---
 
 ## About
+I used **Angular 1.6.9** for this project and following the coding style from johnpapa (https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)
+
 Browser compatibility:
 
 ![Chrome](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/39.1.1/chrome/chrome_48x48.png) | ![Firefox](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/39.1.1/firefox/firefox_48x48.png) | ![IE](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/39.1.1/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) | ![Opera](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/39.1.1/opera/opera_48x48.png) | ![Safari](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/39.1.1/safari/safari_48x48.png)
@@ -49,7 +51,11 @@ http://demo-code-bucket-1.s3-website-us-east-1.amazonaws.com/
 ### Local
 Navigate your browser to `localhost:3000` and voila!
 
-## More Info about gulp tasks
+### Mock
+I used `json-server` (https://github.com/typicode/json-server) to mock the backend. Please see `db.json` under the root of the porject for response schema.
+
+
+## Gulp tasks
 
 The default gulp task will pack all javascript, css, html and host/watch them on ``localhost:3000``. 
 
@@ -71,8 +77,6 @@ The default gulp task will pack all javascript, css, html and host/watch them on
     ```
     npm run gulp test:unit
     ```
-
-## Deployment
 
 ## Development
 ### Components
@@ -113,9 +117,4 @@ Sass styling for the module.
     |---> {page-name-2}
     |- ...
 ```
-
-## Reference
-### Coding style:
-
-https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md
 
